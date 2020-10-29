@@ -1,29 +1,5 @@
-/* IMPORTANT. All of your programs should have the proper heading. The following should be how all your programs begin:
-
-Name: Adham Oudeif
-Assignment Number: #1
-COSC 311 - Winter 2019
-
- */
-
-/**
- * This will be the main driver program for many of your programs. Specifically,
- * you will need to define a data structure and related algorithms to use with this program.
- * We will be using the data file I have provied for you: a file of 68 records. Each record is composed
- * of three fields:
- *      String lastName
- *      String firstName
- *      String ID
- * ID may be implemented as an integer, but it is easier to implement as a string. Both lastName and firstName
- * may not be unique, but the ID **is** unique.
- * 
- * @author Bill Sverdlik
- * @version Version 1.0
- */
-
-/* Anything special you want the teacher to know? Are you asking for bonus points? Explain here.
-Yes sir, I implemented a delete method in my program for bonus points. Thank you*/
-
+/* this program is a DataBase where many operations can be performed. It reads in a list of First and Last names, as well as an ID number and adds it to the record. Then 
+the user is able to manipulate it with the following commands below */
 import java.util.*;
 import java.io.IOException;
 
@@ -32,23 +8,10 @@ public class COSC311Driver
 
     public static void main(String[] args)
     {
-        /*The following declaration declares a data structure that will change from one assignment to the next. For example, you will need to implement 
-         * the following as a doubly linked list, as well as a tree.
-         */ 
 
         DataBase d=new DataBase(); 
         int response;
         Scanner keyboard=new Scanner(System.in);
-
-        /* Read the data into the database from the external disk file here
-         * IMPORTANT: duplicate ID numbers should not be added. Disregard
-         * the entire record for duplicate IDs
-         */
-        /* try{
-        FileReader.fillDataStructure(d);
-        } catch (IOException e) {
-        e.printStackTrace();
-        } */
 
         do
         {
