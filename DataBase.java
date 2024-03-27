@@ -1,3 +1,4 @@
+import io.github.pixee.security.BoundedLineReader;
 import java.io.IOException;
 import java.io.*;
 import java.util.Scanner;
@@ -363,7 +364,7 @@ public class DataBase {
         String currentLine;
 
         // Iterate through file line by line
-        while ((currentLine = reader.readLine()) != null) {
+        while ((currentLine = BoundedLineReader.readLine(reader, 5_000_000)) != null) {
             // Trim extra whitespace off currentLine
             currentLine = currentLine.trim();
 
